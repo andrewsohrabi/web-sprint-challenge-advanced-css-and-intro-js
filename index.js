@@ -237,11 +237,26 @@ function getArtistByIndex(artistsArray,index) {
 Create a function called get20s() 
 it takes one argument of data
 it returns an array with names of artists who were born in and died in 20th century (1900-2000) 
-example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included
+example born in 1901 and died in 1959 - included /
+born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/){
+function get20s(artistsArray){
   /*Your Code Here*/
+  let twentyCenturyArtists = [];
+  for (let i in artistsArray) {
+    let stringArray = artistsArray[i].years.trim().split(" ");
+    // console.log(stringArray)
+    let birthYear = parseInt(stringArray[0]);
+    let deathYear = parseInt(stringArray[2]);
+    // console.log(birthYear);
+    // console.log(deathYear);
+    if (birthYear >= 1900 && deathYear <= 2000) {
+      twentyCenturyArtists.push(artistsArray[i].name);
+    }
+  }
+  // console.log(twentyCenturyArtists);
+  return twentyCenturyArtists;
 }
 
 
