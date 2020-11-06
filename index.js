@@ -293,8 +293,17 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/*Your Code Here*/){
+function addArtist(artistsArray){
     /*Your Code Here*/
+    artistsArray.push({
+      id: 20,
+      name: "Andrew Sohrabi", 
+      years: "1996 - current day",
+      genre: "Web Design", 
+      nationality: "USA",
+      bio: "Very stable genius"
+    })
+    return artistsArray;
   }
 
   
